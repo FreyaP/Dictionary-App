@@ -1,11 +1,13 @@
 import axios from 'axios';
 import React, { useState } from 'react';
+import Results from './Results';
 
 export default function Search() {
 let [keyword, setKeyword] = useState("");
+let [results, setResults] = useState(null);
 
 function handleResponse(response) {
-    console.log(response)
+    setResults(response.data[0]);
 }
 
 function search(e) {
@@ -21,6 +23,7 @@ e.target.reset(); // clear form
             <form onSubmit={search}>
                 <input type='search' onChange={e => setKeyword(e.target.value)}/>
             </form>
+            <Results results={results}/>
         </div>
     )
 }
