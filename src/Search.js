@@ -1,6 +1,16 @@
 import axios from 'axios';
 import React, { useState } from 'react';
+import styled from 'styled-components';
 import Results from './Results';
+
+const FormStyles = styled.form`
+input {
+    border-radius: 10px;
+    font-size: 30px;
+    border: 2px solid black;
+    box-shadow: 10px 10px 10px grey;
+}
+`;
 
 export default function Search() {
 let [keyword, setKeyword] = useState("");
@@ -20,9 +30,9 @@ e.target.reset(); // clear form
 
     return (
         <div>
-            <form onSubmit={search}>
+            <FormStyles onSubmit={search}>
                 <input type='search' onChange={e => setKeyword(e.target.value)}/>
-            </form>
+            </FormStyles>
             <Results results={results}/>
         </div>
     )
