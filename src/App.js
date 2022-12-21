@@ -17,7 +17,7 @@ transition: 1s ease-in-out;
 animation: flickerAnimation 2s infinite;
 }
 svg:hover {
-  scale: 1.2;
+  
   cursor: pointer;
 }
 
