@@ -7,8 +7,10 @@ const FormStyles = styled.form`
 input {
     border-radius: 10px;
     font-size: 30px;
-    border: 2px solid black;
-    box-shadow: 10px 10px 10px grey;
+    border: 2px solid #333;
+    box-shadow: 5px 5px 5px grey;
+    padding: 6px 4px;
+    color: #333;
 }
 `;
 
@@ -30,6 +32,7 @@ e.target.reset(); // clear form
 
     return (
         <div>
+            <h1>Search Word!</h1>
             <FormStyles onSubmit={search}>
                 <input type='search' onChange={e => setKeyword(e.target.value)}/>
             </FormStyles>

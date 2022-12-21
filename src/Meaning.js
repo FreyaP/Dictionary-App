@@ -6,10 +6,22 @@ const MeaningStyles = styled.div`
 padding-bottom: 10px;
 margin: 20px 100px;
 padding: 10px;
-border: 2px solid black;
+border: 2px solid white;
 border-radius: 10px;
-box-shadow: 10px 10px 10px grey;
-background-color: #FFFBE9;
+box-shadow: 5px 5px 5px grey ;
+
+
+h3 {
+    font-size: 24px;
+}
+
+em {
+    font-size: 16px;
+    opacity: 75%;
+}
+ p {
+    margin-top: 25px;
+ }
 
 
 `;
