@@ -14,7 +14,6 @@ h1 {
 export default function Results({ results }) {
 
     if (results) {
-        console.log(results);
         return (
         <ResultsStyles>
             <h1>{results.word}</h1>

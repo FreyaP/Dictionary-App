@@ -1,0 +1,3 @@
+window.env = {
+  "PEXEL_API_KEY": "563492ad6f91700001000001551d2f5eb5c440c3af5707b8f53aeeb1"
+};

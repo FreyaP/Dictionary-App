@@ -1,7 +1,11 @@
+
 import axios from 'axios';
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import Results from './Results';
+import env from 'react-dotenv';
+
+
 
 const FormStyles = styled.form`
 input {
@@ -21,11 +25,21 @@ let [results, setResults] = useState(null);
 function handleResponse(response) {
     setResults(response.data[0]);
 }
+function handlePexelResponse(response) {
+    console.log(response);
+}
 
 function search(e) {
 e.preventDefault();
 let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`
+const pexelApiKey = env.PEXEL_API_KEY;
+let pexelApiUrl =`https://api.pexels.com/v1/search?query=${keyword}&per_page=1`
 axios.get(apiUrl).then(handleResponse);
+axios.get(pexelApiUrl, {
+    headers: {
+        Authorization: `Bearer ${pexelApiKey}`
+    }
+}).then(handlePexelResponse);
 e.target.reset(); // clear form
 }
 
