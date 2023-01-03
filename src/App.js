@@ -5,6 +5,11 @@ import { useTheme, useThemeUpdate } from './context/ThemeContext';
 import Search from './Search';
 import { ReactComponent as Bulb } from './assets/bulb.svg';
 
+const ContainerStyles = styled.div`
+max-width: 1200px;
+margin: 0 auto;
+min-width: 600px;
+`;
 const IconStyles = styled.button`
 margin-top: 30px; 
 background:  transparent;
@@ -41,17 +46,16 @@ export default function App() {
     textAlign: "center",
     height: "100%",
     overflow: "auto", // bg color expands with child height
-   
-    
-    
   }
 
   return (
     <div style={themeStyles}>
+      <ContainerStyles>
       <IconStyles onClick={toggleTheme} darkTheme={darkTheme}>
       <Bulb />
       </IconStyles>
       <Search/>
+      </ContainerStyles>
     </div>
    
   );

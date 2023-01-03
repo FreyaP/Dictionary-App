@@ -10,15 +10,28 @@ h1 {
     margin-top: 50px;
 }
 `;
+const PhotoStyles = styled.div`
+display: grid;
+margin: 20px 100px;
+img {
+    border-radius: 10px;
+    width: 100%;
+    
+}
+`;
 
-export default function Results({ results }) {
+export default function Results({ results, hero }) {
 
-    if (results) {
+    if (results && hero) {
         return (
         <ResultsStyles>
             <h1>{results.word}</h1>
+           
             <h4>{results.phonetic}</h4>
             {results.phonetics[0]?.audio ? <Audio audio={results.phonetics[0].audio} id={results.word}/> : null}
+            <PhotoStyles>
+            <img src={hero.src.landscape} alt={results.word}/>
+            </PhotoStyles>
             {results.meanings.map((meaning, index) => {
                 return (
                     <div key={index}>
