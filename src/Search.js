@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import Results from './Results';
 import Photos from './Photos';
-//import env from 'react-dotenv';
+import env from 'react-dotenv';
 
 
 
@@ -36,7 +36,7 @@ function handlePexelResponse(response) {
 function search(e) {
 e.preventDefault();
 let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`
-const pexelApiKey = "563492ad6f91700001000001551d2f5eb5c440c3af5707b8f53aeeb1";
+const pexelApiKey = env.PEXEL_API_KEY;
 let pexelApiUrl =`https://api.pexels.com/v1/search?query=${keyword}&per_page=6`
 axios.get(apiUrl).then(handleResponse);
 axios.get(pexelApiUrl, {
