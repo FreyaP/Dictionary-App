@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import Results from './Results';
 import Photos from './Photos';
-import env from 'react-dotenv';
+//import env from 'react-dotenv';
 
 
 
