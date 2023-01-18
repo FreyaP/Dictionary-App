@@ -14,6 +14,7 @@ const IconStyles = styled.button`
 margin-top: 30px; 
 background:  transparent;
 border: none;
+
 svg {
 height: 80px;
 margin: 20px;
@@ -22,7 +23,6 @@ transition: 1s ease-in-out;
 animation: flickerAnimation 2s infinite;
 }
 svg:hover {
-  
   cursor: pointer;
 }
 

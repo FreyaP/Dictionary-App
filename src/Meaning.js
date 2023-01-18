@@ -21,7 +21,7 @@ em {
     opacity: 75%;
 }
  p {
-    margin-top: 25px;
+    margin-top: 15px;
  }
 
  @media (width <= 600px) {
