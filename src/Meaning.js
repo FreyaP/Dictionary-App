@@ -24,6 +24,9 @@ em {
     margin-top: 25px;
  }
 
+ @media (width <= 600px) {
+    margin: 20px 50px;
+ }
 
 `;
 

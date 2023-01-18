@@ -8,7 +8,7 @@ import { ReactComponent as Bulb } from './assets/bulb.svg';
 const ContainerStyles = styled.div`
 max-width: 1200px;
 margin: 0 auto;
-min-width: 600px;
+min-width: 400px;
 `;
 const IconStyles = styled.button`
 margin-top: 30px; 

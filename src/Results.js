@@ -16,8 +16,10 @@ margin: 20px 100px;
 img {
     border-radius: 10px;
     width: 100%;
-    
 }
+@media (width <= 600px) {
+    margin: 20px 50px;
+ }
 `;
 
 export default function Results({ results, hero }) {

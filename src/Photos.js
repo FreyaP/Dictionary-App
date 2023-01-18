@@ -7,11 +7,14 @@ grid-template-columns: 1fr 1fr 1fr;
 gap: 10px;
 margin: 20px 100px;
 
-
-
 img {
     width: 100%;
     border-radius: 10px;
+}
+
+@media (width <= 600px) {
+    grid-template-columns: 1fr 1fr;
+    margin: 20px 50px;
 }
 `
 
