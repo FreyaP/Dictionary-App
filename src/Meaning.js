@@ -17,7 +17,6 @@ h3 {
 }
 
 em {
-    font-size: 16px;
     opacity: 75%;
 }
  p {
@@ -26,7 +25,9 @@ em {
 
  @media (width <= 600px) {
     margin: 20px 50px;
+   
  }
+ 
 
 `;
 

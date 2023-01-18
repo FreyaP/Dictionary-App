@@ -16,6 +16,7 @@ img {
     grid-template-columns: 1fr 1fr;
     margin: 20px 50px;
 }
+
 `
 
 export default function Photos({photos}) {

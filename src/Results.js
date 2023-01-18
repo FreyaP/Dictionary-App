@@ -9,6 +9,7 @@ h1 {
     text-transform: uppercase;
     margin-top: 50px;
 }
+
 `;
 const PhotoStyles = styled.div`
 display: grid;
@@ -20,6 +21,7 @@ img {
 @media (width <= 600px) {
     margin: 20px 50px;
  }
+
 `;
 
 export default function Results({ results, hero }) {

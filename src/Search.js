@@ -18,6 +18,11 @@ input {
     padding: 6px 4px;
     color: #333;
 }
+@media (width <= 400px) {
+    input {
+        width: 75%;
+    }
+}
 `;
 
 export default function Search() {
